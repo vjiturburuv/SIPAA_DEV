@@ -16,7 +16,7 @@ namespace SIPAA_DEV
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CrearAccesoUsuario());
+            Application.Run(new Form1());
         }
     }
 }
