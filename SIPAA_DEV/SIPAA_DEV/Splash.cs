@@ -10,11 +10,41 @@ using System.Windows.Forms;
 
 namespace SIPAA_DEV
 {
+
+    
     public partial class Splash : Form
     {
+        public int iContador;
         public Splash()
         {
             InitializeComponent();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (PanelCarga.Width < PanelBarra.Width)
+            {
+
+                int iSuma = (PanelBarra.Width/100) * 5;
+
+                PanelCarga.Width = PanelCarga.Width + iSuma;
+                iContador = iContador + (iSuma / 4);
+                lbCarga.Text = iContador + "%";
+            }
+            else
+            {
+                timer1.Enabled = false;
+                //MessageBox.Show("Finalizo");
+
+                Acceso fAcceso = new Acceso();
+                fAcceso.Show();
+                this.Hide();
+            }
+        }
+
+        private void Splash_Load(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
         }
     }
 }
