@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BarraSuperior = new System.Windows.Forms.Panel();
-            this.btnMin = new System.Windows.Forms.Button();
-            this.btnCerrar = new System.Windows.Forms.Button();
             this.PanelSuperior = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,52 +48,12 @@
             this.btnAlmacen = new System.Windows.Forms.Button();
             this.btnRecursosh = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.BarraSuperior.SuspendLayout();
+            this.BarraSuperior = new System.Windows.Forms.Panel();
+            this.btnCerrar = new System.Windows.Forms.Button();
+            this.btnMin = new System.Windows.Forms.Button();
             this.PanelSuperior.SuspendLayout();
+            this.BarraSuperior.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // BarraSuperior
-            // 
-            this.BarraSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.BarraSuperior.Controls.Add(this.btnMin);
-            this.BarraSuperior.Controls.Add(this.btnCerrar);
-            this.BarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BarraSuperior.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.BarraSuperior.Location = new System.Drawing.Point(0, 0);
-            this.BarraSuperior.Name = "BarraSuperior";
-            this.BarraSuperior.Size = new System.Drawing.Size(1008, 26);
-            this.BarraSuperior.TabIndex = 10;
-            this.BarraSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseDown);
-            this.BarraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseMove);
-            this.BarraSuperior.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseUp);
-            // 
-            // btnMin
-            // 
-            this.btnMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.btnMin.BackgroundImage = global::SIPAA_DEV.Properties.Resources.ic_remove_white_18dp;
-            this.btnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.btnMin.Location = new System.Drawing.Point(963, 6);
-            this.btnMin.Name = "btnMin";
-            this.btnMin.Size = new System.Drawing.Size(15, 15);
-            this.btnMin.TabIndex = 11;
-            this.btnMin.UseVisualStyleBackColor = false;
-            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(81)))), ((int)(((byte)(30)))));
-            this.btnCerrar.BackgroundImage = global::SIPAA_DEV.Properties.Resources.ic_clear_white_18dp;
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
-            this.btnCerrar.Location = new System.Drawing.Point(984, 6);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(15, 15);
-            this.btnCerrar.TabIndex = 10;
-            this.btnCerrar.UseVisualStyleBackColor = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // PanelSuperior
             // 
@@ -380,6 +337,49 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // BarraSuperior
+            // 
+            this.BarraSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.BarraSuperior.Controls.Add(this.btnMin);
+            this.BarraSuperior.Controls.Add(this.btnCerrar);
+            this.BarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BarraSuperior.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.BarraSuperior.Location = new System.Drawing.Point(0, 0);
+            this.BarraSuperior.Name = "BarraSuperior";
+            this.BarraSuperior.Size = new System.Drawing.Size(1008, 26);
+            this.BarraSuperior.TabIndex = 10;
+            this.BarraSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseDown);
+            this.BarraSuperior.MouseMove += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseMove);
+            this.BarraSuperior.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BarraSuperior_MouseUp);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(81)))), ((int)(((byte)(30)))));
+            this.btnCerrar.BackgroundImage = global::SIPAA_DEV.Properties.Resources.ic_clear_white_18dp;
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCerrar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.btnCerrar.Location = new System.Drawing.Point(984, 6);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(15, 15);
+            this.btnCerrar.TabIndex = 10;
+            this.btnCerrar.UseVisualStyleBackColor = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            // 
+            // btnMin
+            // 
+            this.btnMin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.btnMin.BackgroundImage = global::SIPAA_DEV.Properties.Resources.ic_remove_white_18dp;
+            this.btnMin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(87)))), ((int)(((byte)(155)))));
+            this.btnMin.Location = new System.Drawing.Point(963, 6);
+            this.btnMin.Name = "btnMin";
+            this.btnMin.Size = new System.Drawing.Size(15, 15);
+            this.btnMin.TabIndex = 11;
+            this.btnMin.UseVisualStyleBackColor = false;
+            this.btnMin.Click += new System.EventHandler(this.btnMin_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -401,18 +401,14 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
             this.Text = "Dashboard";
-            this.BarraSuperior.ResumeLayout(false);
             this.PanelSuperior.ResumeLayout(false);
             this.PanelSuperior.PerformLayout();
+            this.BarraSuperior.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnMin;
-        private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Panel BarraSuperior;
         private System.Windows.Forms.Button btnCompras;
         private System.Windows.Forms.Button btnSistemas;
         private System.Windows.Forms.Button btnEscolar;
@@ -433,5 +429,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Panel BarraSuperior;
+        private System.Windows.Forms.Button btnMin;
+        private System.Windows.Forms.Button btnCerrar;
     }
 }
