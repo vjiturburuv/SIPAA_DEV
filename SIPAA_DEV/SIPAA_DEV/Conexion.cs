@@ -12,7 +12,7 @@ namespace SIPAA_DEV
     {
         SqlConnection cn;
         SqlCommand cmd;
-        SqlDataReader dr;
+        //SqlDataReader dr;
 
         public Conexion()
         {
@@ -60,23 +60,24 @@ namespace SIPAA_DEV
         
         public void crearAccesoUsuario(string cvusuario,int idtrab,string nombre, string passw, int stusuario, string usumod,DateTime fhumod, string prgumod)
         {
+            int dr;
             try
             {
                 cmd = new SqlCommand("insert into ACCECUSUARIO(CVUSUARIO,IDTRAB,NOMBRE,PASSW,STUSUARIO,USUUMOD,FHUMOD,PRGUMOD) values" +
                                     "('" + cvusuario + "','" + idtrab + "', '" + nombre + "','" + passw + "', '" + stusuario + "','" + usumod + "','" + fhumod + "','" + prgumod + "')", cn);
-                dr = cmd.ExecuteReader();
+                dr = cmd.ExecuteNonQuery();
 
-                //if (dr.Rad()>1)
-                //{
-                //    MessageBox.Show("Se ha creado correctamente");
-                //}
-                //else
-                //{
-                //    MessageBox.Show("No ha creado correctamente");
-                //}
+                if (dr == 1)
+                {
+                    MessageBox.Show("Se ha creado correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("No se puede crear");
+                }
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("No pudo crear: " + ex);
             }  
