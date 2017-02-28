@@ -53,10 +53,10 @@
       <DependentUpon>Acceso.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
-    <Compile Include="CrearModulo.cs">
+    <Compile Include="Recursos_Humanos\Administracion\CrearModulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CrearModulo.Designer.cs">
+    <Compile Include="Recursos_Humanos\Administracion\CrearModulo.Designer.cs">
       <DependentUpon>CrearModulo.cs</DependentUpon>
     </Compile>
     <Compile Include="Dashboard.cs">
@@ -99,7 +99,7 @@
     <EmbeddedResource Include="CrearAccesoUsuario.resx">
       <DependentUpon>CrearAccesoUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrearModulo.resx">
+    <EmbeddedResource Include="Recursos_Humanos\Administracion\CrearModulo.resx">
       <DependentUpon>CrearModulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">

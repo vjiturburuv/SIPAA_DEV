@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,9 @@ namespace SIPAA_DEV
     {
         SqlConnection cn;
         SqlCommand cmd;
-        //SqlDataReader dr;
+        SqlDataReader dr;
+        SqlDataAdapter da;
+        DataTable dt;
 
         public Conexion()
         {
@@ -27,6 +30,21 @@ namespace SIPAA_DEV
                 MessageBox.Show("No se concto con la BD: " + ex.ToString());
             }
         }
+
+        //Asigna conexion
+        public void asignarConexion(SqlCommand cmd)
+        {
+
+            cmd.Connection = cn;
+        }
+
+        //Cierra Conexion
+        public void cerrarConexion()
+        {
+
+            cn.Close();
+        }
+
 
         //public int usuarioEncontrado(string nombre, string pwd)
         //{
@@ -57,7 +75,9 @@ namespace SIPAA_DEV
         //    return resultado;
 
         //}
-        
+
+
+        //funcion para crear Acceso Usuario
         public void crearAccesoUsuario(string cvusuario,int idtrab,string nombre, string passw, int stusuario, string usumod,DateTime fhumod, string prgumod)
         {
             int dr;
@@ -83,6 +103,8 @@ namespace SIPAA_DEV
             }  
         }
 
+
+        //funcion para crear catalogo de modulo
         public void crearModulo(string cvmodulo, string descripcion, string cvmodpad, int orden, string ambiente, string modulo, string usuumod, DateTime fhumod, string prgumod)
         {
             int dr;
@@ -104,6 +126,36 @@ namespace SIPAA_DEV
             catch (Exception ex)
             {
                 MessageBox.Show("No se pudo crear el modulo: " + ex);
+            }
+        }
+
+        //funcion para mostrar modulos en el data view
+        public void mostrarModulo(DataGridView dgv)
+        {
+            try
+            {
+                da = new SqlDataAdapter("select * from ACCECMODULO", cn);
+                dt = new DataTable();
+                da.Fill(dt);
+                dgv.DataSource = dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo mostrar el modulo: " + ex);
+            }
+        }
+
+
+        //funcion para buscar catalogo
+        public void buscarModulo(string cvmodulo)
+        {
+            try
+            {
+                cmd = new SqlCommand("select * from ACCECMODULO where CVMODULO like '%" + cvmodulo+"%'");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se encontro: " + ex);
             }
         }
     }

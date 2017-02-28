@@ -82,9 +82,9 @@ namespace SIPAA_DEV
             prgumod = txtPrguMod.Text;
 
 
-            fhumod = dtpFhuMod.Text;
+            //fhumod = dtpFhuMod.Text;
             //Se parsea el texto tomado del datetimepicker 
-            fhumod1 = DateTime.Parse(fhumod);
+            //fhumod1 = DateTime.Parse(fhumod);
 
             //orden = int.Parse(txtOrden.Text);
 
@@ -99,6 +99,12 @@ namespace SIPAA_DEV
 
             // pasamos parametros a la funcion
             //c.crearModulo(cvmodulo,descripcion,cvmodpad,orden,ambiente,modulo,usuumod,fh,prgumod);
+        }
+
+        private void CrearModulo_Load(object sender, EventArgs e)
+        {
+            Conexion c = new Conexion();
+            c.mostrarModulo(dgvModulo);
         }
     }
 }
