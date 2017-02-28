@@ -82,5 +82,29 @@ namespace SIPAA_DEV
                 MessageBox.Show("No pudo crear: " + ex);
             }  
         }
+
+        public void crearModulo(string cvmodulo, string descripcion, string cvmodpad, int orden, string ambiente, string modulo, string usuumod, DateTime fhumod, string prgumod)
+        {
+            int dr;
+            try
+            {
+                cmd = new SqlCommand("insert into ACCECMODULO(CVMODULO,DESCRIPCION,CVMODPAD,ORDEN,AMBIENTE,MODULO,USUUMOD,FHUMOD,PRGUMOD) values" +
+                                   "('" + cvmodulo + "','" + descripcion + "', '" + cvmodpad + "','" + orden + "', '" + ambiente + "','" + modulo + "','" + usuumod + "','" + fhumod + "','"+ prgumod + "')", cn);
+                dr = cmd.ExecuteNonQuery();
+
+                if (dr == 1)
+                {
+                    MessageBox.Show("Se ha creado correctamente");
+                }
+                else
+                {
+                    MessageBox.Show("No se puede crear");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se pudo crear el modulo: " + ex);
+            }
+        }
     }
 }
